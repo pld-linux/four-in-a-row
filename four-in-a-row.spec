@@ -1,25 +1,27 @@
 Summary:	"Four in a row" game for GNOME
 Summary(pl.UTF-8):	Gra "cztery w rzędzie" dla GNOME
 Name:		four-in-a-row
-Version:	3.12.3
+Version:	3.16.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/four-in-a-row/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	7b54457fab0ef19a23975e7c319115ed
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/four-in-a-row/3.16/%{name}-%{version}.tar.xz
+# Source0-md5:	0d532689e7a9b30eea12da57d1f5f7ff
 URL:		https://wiki.gnome.org/Apps/Four-in-a-row
+BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gnome-common
-BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	gtk+3-devel >= 3.13.2
 BuildRequires:	intltool >= 0.50
 BuildRequires:	libcanberra-gtk3-devel >= 0.26
 BuildRequires:	librsvg-devel >= 2.32.0
 BuildRequires:	pkgconfig
+BuildRequires:	vala >= 2:0.22
 BuildRequires:	yelp-tools
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	glib2 >= 1:2.26.0
-Requires:	gtk+3 >= 3.10.0
+Requires:	gtk+3 >= 3.13.2
 Requires:	hicolor-icon-theme
 Requires:	libcanberra-gtk3 >= 0.26
 Requires:	librsvg >= 2.32.0
@@ -64,12 +66,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %glib_compile_schemas
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
 %postun
 %glib_compile_schemas
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
 %files -f %{name}.lang
@@ -80,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/glib-2.0/schemas/org.gnome.four-in-a-row.gschema.xml
 %{_datadir}/four-in-a-row
 %{_desktopdir}/four-in-a-row.desktop
-%{_iconsdir}/HighContrast/*/apps/four-in-a-row.png
-%{_iconsdir}/hicolor/*/apps/four-in-a-row.png
+%{_iconsdir}/hicolor/*x*/apps/four-in-a-row.png
 %{_iconsdir}/hicolor/scalable/apps/four-in-a-row.svg
+%{_iconsdir}/hicolor/scalable/apps/four-in-a-row-symbolic.svg
 %{_mandir}/man6/four-in-a-row.6*
