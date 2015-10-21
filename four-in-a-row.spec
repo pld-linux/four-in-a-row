@@ -1,12 +1,12 @@
 Summary:	"Four in a row" game for GNOME
 Summary(pl.UTF-8):	Gra "cztery w rzędzie" dla GNOME
 Name:		four-in-a-row
-Version:	3.16.2
+Version:	3.18.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/four-in-a-row/3.16/%{name}-%{version}.tar.xz
-# Source0-md5:	0d532689e7a9b30eea12da57d1f5f7ff
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/four-in-a-row/3.18/%{name}-%{version}.tar.xz
+# Source0-md5:	f6118c7685980349bff06de850f8f66e
 URL:		https://wiki.gnome.org/Apps/Four-in-a-row
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
