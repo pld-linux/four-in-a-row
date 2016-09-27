@@ -11,7 +11,6 @@ URL:		https://wiki.gnome.org/Apps/Four-in-a-row
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	gnome-common
 BuildRequires:	gtk+3-devel >= 3.13.2
 BuildRequires:	intltool >= 0.50
 BuildRequires:	libcanberra-gtk3-devel >= 0.26
